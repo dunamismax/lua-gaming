@@ -4,14 +4,13 @@
 
 <p align="center">
   <a href="https://github.com/dunamismax/lua-gaming">
-    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&pause=1000&color=000080&center=true&vCenter=true&width=800&lines=Lua+Gaming+Monorepo;Complete+Game+Development+Stack;L%C3%96VE+%2B+L%C3%96VR+%2B+PICO-8+%2B+TIC-80;From+2D+to+VR+to+Fantasy+Consoles;Pure+Lua%2C+Maximum+Creativity." alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&pause=1000&color=000080&center=true&vCenter=true&width=800&lines=Lua+Gaming+Monorepo;Complete+Game+Development+Stack;L%C3%96VE+%2B+PICO-8+%2B+TIC-80;From+2D+to+Fantasy+Consoles;Pure+Lua%2C+Maximum+Creativity." alt="Typing SVG" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://www.lua.org/"><img src="https://img.shields.io/badge/Lua-5.4+-000080.svg?logo=lua" alt="Lua Version"></a>
   <a href="https://love2d.org/"><img src="https://img.shields.io/badge/L%C3%96VE-11.4-pink.svg?logo=love2d" alt="LÖVE Version"></a>
-  <a href="https://lovr.org/"><img src="https://img.shields.io/badge/L%C3%96VR-0.17-purple.svg" alt="LÖVR Version"></a>
   <a href="https://www.lexaloffle.com/pico-8.php"><img src="https://img.shields.io/badge/PICO--8-0.2.5-orange.svg" alt="PICO-8"></a>
   <a href="https://tic80.com/"><img src="https://img.shields.io/badge/TIC--80-1.1-red.svg" alt="TIC-80"></a>
   <a href="https://img.shields.io/github/license/dunamismax/lua-gaming"><img src="https://img.shields.io/github/license/dunamismax/lua-gaming" alt="License"></a>
@@ -23,16 +22,16 @@
 
 ## About This Project
 
-A comprehensive, production-ready monorepo for game development using the complete Lua gaming ecosystem. This repository demonstrates modern game development workflows across multiple frameworks, from 2D indie games to VR experiences and fantasy console development.
+A comprehensive, production-ready monorepo for game development using the complete Lua gaming ecosystem. This repository demonstrates modern game development workflows across multiple frameworks, from 2D indie games to fantasy console development.
 
 **Key Features:**
 
-- **Complete Framework Coverage** - LÖVE, LÖVR, PICO-8, and TIC-80 all in one place
+- **Complete Framework Coverage** - LÖVE, PICO-8, and TIC-80 all in one place
 - **Production-Grade Structure** - Shared libraries, utilities, and organized project templates
 - **Working Demo Games** - Fully functional examples for each framework
 - **Developer-Friendly Tools** - Scripts for creating, building, and running games
 - **Comprehensive Documentation** - Guides, best practices, and framework-specific tutorials
-- **Cross-Platform Ready** - Support for desktop, mobile, web, and VR platforms
+- **Cross-Platform Ready** - Support for desktop, mobile, and web platforms
 
 ---
 
@@ -64,7 +63,6 @@ This will create a new repository in your GitHub account with all the code, stru
 
 - **[Lua/LuaJIT](https://www.lua.org/)** - The Lua programming language
 - **[LÖVE](https://love2d.org/)** - 2D game framework
-- **[LÖVR](https://lovr.org/)** - 3D/VR game framework
 - **[PICO-8](https://www.lexaloffle.com/pico-8.php)** - Fantasy console (commercial)
 - **[TIC-80](https://tic80.com/)** - Open-source fantasy console
 
@@ -78,7 +76,6 @@ cd lua-gaming
 # 2. Run demo games
 make demos  # Show all available demos
 make run-love2d  # Run LÖVE 2D Asteroids demo
-make run-lovr    # Run LÖVR 3D Space Explorer demo
 
 # 3. Create a new game
 make new-game FRAMEWORK=love2d NAME=my-awesome-game
@@ -96,7 +93,6 @@ love .  # Start developing!
 lua-gaming/
 ├── games/                 # Game projects organized by framework
 │   ├── love2d/           # LÖVE 2D games (Asteroids demo + template)
-│   ├── lovr/             # LÖVR 3D/VR games (Space Explorer + template)
 │   ├── pico8/            # PICO-8 fantasy console games (Snake + template)
 │   └── tic80/            # TIC-80 fantasy console games (Platformer + template)
 ├── shared/               # Shared libraries and assets
@@ -125,17 +121,6 @@ The foundation for traditional 2D game development, from indie games to commerci
 - **Integrated Physics:** Built-in Box2D physics engine for realistic 2D physics simulation
 - **Audio System:** Complete audio pipeline with spatial audio, streaming, and effects
 - **Cross-Platform:** Native support for Windows, macOS, Linux, Android, and iOS
-
-### **3D and VR Development: LÖVR Framework**
-
-Cutting-edge 3D and virtual reality game development with Lua simplicity.
-
-- [**LÖVR**](https://lovr.org/)
-  - **Role:** 3D and VR Game Framework
-  - **Description:** A free, open-source framework for crafting 3D and Virtual Reality experiences with Lua. LÖVR simplifies 3D rendering, VR device management, and spatial audio, making immersive application development accessible to Lua developers.
-- **VR Support:** Native integration with Oculus, Valve Index, Windows Mixed Reality, and more
-- **3D Rendering:** Modern graphics pipeline with PBR materials, lighting, and post-processing
-- **Hand Tracking:** Full support for VR controllers and hand tracking systems
 
 ### **Fantasy Console Development**
 
@@ -183,8 +168,6 @@ Classic space shooter with modern touches featuring particle effects, smooth con
 
 ### 🌌 **Space Explorer 3D** (LÖVR)
 
-Immersive 3D space exploration with full VR support, spatial audio, and hand controller integration.
-
 ### 🐍 **Snake Retro** (PICO-8)
 
 Classic snake game with authentic retro aesthetics, smooth animations, and challenging gameplay.
@@ -202,7 +185,6 @@ Tight platformer controls with pixel-perfect collision detection, collectibles, 
 ```bash
 # Use the convenient script
 ./scripts/new-game.sh love2d my-platformer
-./scripts/new-game.sh lovr my-vr-experience
 ./scripts/new-game.sh pico8 my-retro-game
 ./scripts/new-game.sh tic80 my-arcade-game
 

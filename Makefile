@@ -11,7 +11,6 @@ help:
 	@echo "  help        - Show this help message"
 	@echo "  demos       - Show demo game instructions"
 	@echo "  run-love2d  - Run LÖVE 2D demo (Asteroids)"
-	@echo "  run-lovr    - Run LÖVR demo (Space Explorer 3D)"
 	@echo "  new-game    - Create a new game (requires FRAMEWORK and NAME)"
 	@echo "  build-love  - Build LÖVE game (requires GAME)"
 	@echo "  clean       - Clean build artifacts"
@@ -31,8 +30,6 @@ demos:
 run-love2d:
 	@./scripts/run-demos.sh love2d
 
-run-lovr:
-	@./scripts/run-demos.sh lovr
 
 run-pico8:
 	@./scripts/run-demos.sh pico8
@@ -79,16 +76,12 @@ dev-love2d:
 	@echo "Starting LÖVE 2D development environment..."
 	@cd games/love2d/asteroids-2d && love .
 
-dev-lovr:
-	@echo "Starting LÖVR development environment..."
-	@cd games/lovr/space-explorer-3d && lovr .
 
 # Check prerequisites
 check-prereqs:
 	@echo "Checking prerequisites..."
 	@command -v lua >/dev/null 2>&1 && echo "✓ Lua found" || echo "✗ Lua not found"
 	@command -v love >/dev/null 2>&1 && echo "✓ LÖVE found" || echo "✗ LÖVE not found"
-	@command -v lovr >/dev/null 2>&1 && echo "✓ LÖVR found" || echo "✗ LÖVR not found"
 	@command -v pico8 >/dev/null 2>&1 && echo "✓ PICO-8 found" || echo "✗ PICO-8 not found"
 	@command -v tic80 >/dev/null 2>&1 && echo "✓ TIC-80 found" || echo "✗ TIC-80 not found"
 
@@ -99,7 +92,6 @@ quickstart:
 	@echo ""
 	@echo "1. Install prerequisites:"
 	@echo "   • LÖVE: https://love2d.org/"
-	@echo "   • LÖVR: https://lovr.org/"
 	@echo "   • PICO-8: https://www.lexaloffle.com/pico-8.php"
 	@echo "   • TIC-80: https://tic80.com/"
 	@echo ""
