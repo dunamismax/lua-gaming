@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="lua.jpg" alt="Lua Gaming" width="300" />
+</p>
+
+<p align="center">
   <a href="https://github.com/dunamismax/lua-gaming">
     <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&pause=1000&color=000080&center=true&vCenter=true&width=800&lines=Lua+Gaming+Monorepo;Complete+Game+Development+Stack;L%C3%96VE+%2B+L%C3%96VR+%2B+PICO-8+%2B+TIC-80;From+2D+to+VR+to+Fantasy+Consoles;Pure+Lua%2C+Maximum+Creativity." alt="Typing SVG" />
   </a>
