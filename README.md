@@ -107,52 +107,126 @@ lua-gaming/
 ---
 
 <details>
-<summary><strong>Click to expand: Framework Stack Details</strong></summary>
+<summary><strong>Click to expand: Technology Stack Details</strong></summary>
 
-This monorepo encompasses the complete Lua gaming ecosystem, providing developers with a unified development environment across multiple specialized frameworks. Each framework targets different gaming contexts while maintaining the simplicity and power of Lua as the core programming language.
+Below is a comprehensive technology stack for game development using the Lua programming language. This stack is centered around the LÖVE ecosystem, providing a focused and powerful toolkit for building 2D and VR games. Lua is celebrated for its simplicity, performance, and ease of integration, making this stack ideal for indie developers, game jams, and commercial projects alike.
 
-### **2D Game Development: LÖVE Framework**
+### **Core Game Frameworks: Your Development Engine**
 
-The foundation for traditional 2D game development, from indie games to commercial releases.
+This stack focuses on two primary, open-source frameworks that share a similar minimalist philosophy, one for 2D and one for 3D/VR.
 
-- [**LÖVE (Love2D)**](https://love2d.org/)
-  - **Role:** Cross-Platform 2D Game Framework
-  - **Description:** A free, open-source framework for making 2D games in Lua. LÖVE provides a simple yet powerful API for graphics, audio, physics, and input, allowing developers to focus on game logic while handling cross-platform deployment automatically.
-- **Integrated Physics:** Built-in Box2D physics engine for realistic 2D physics simulation
-- **Audio System:** Complete audio pipeline with spatial audio, streaming, and effects
-- **Cross-Platform:** Native support for Windows, macOS, Linux, Android, and iOS
+- [**LÖVE**](https://love2d.org/)
+  - **Role:** 2D Game Framework
+  - **Description:** A simple, powerful, and cross-platform framework for building 2D games in Lua. LÖVE provides a clean API for graphics, audio, physics, and input, allowing you to focus on game logic from day one. It runs on all major desktop and mobile platforms, making it the ideal foundation for any 2D project.
+- [**LÖVR**](https://lovr.org/)
+  - **Role:** 3D and VR Framework
+  - **Description:** A free, open-source framework for crafting 3D and Virtual Reality experiences with Lua. LÖVR simplifies the complexities of 3D rendering and VR device management, providing an accessible API to create immersive applications for headsets like the Oculus Quest and Valve Index, as well as standard desktop environments.
 
-### **Fantasy Console Development**
+### **Fantasy Consoles: Creativity Through Constraints**
 
-Retro-inspired game development with creative constraints and instant distribution.
+For a unique development experience focused on creativity and rapid iteration within a retro aesthetic.
 
 - [**PICO-8**](https://www.lexaloffle.com/pico-8.php)
   - **Role:** Fantasy Game Console
-  - **Description:** A self-contained environment for creating, sharing, and playing tiny retro-style games. PICO-8 enforces creative limitations (128x128 resolution, 16-color palette) that encourage focused game design and rapid prototyping.
+  - **Description:** A self-contained environment for creating, sharing, and playing tiny, retro-style games. PICO-8 enforces strict limitations (128x128 resolution, 16-color palette) to encourage focused design. The entire development process, from coding in Lua to creating sprites and sound, happens within its charming interface.
 - [**TIC-80**](https://tic80.com/)
   - **Role:** Open-Source Fantasy Console
-  - **Description:** A free and open-source fantasy computer for making and sharing small games. TIC-80 offers a complete suite of built-in development tools and serves as an accessible entry point into game development.
+  - **Description:** A free and open-source fantasy computer for making and sharing small games. Supporting Lua scripting, TIC-80 offers a complete suite of built-in tools for development and serves as a great alternative to PICO-8 with its own unique feature set and community.
 
-### **Shared Development Libraries**
+### **Implemented Libraries for LÖVE: A Curated & Expanded Toolset**
 
-A curated collection of production-tested libraries for common game development tasks.
+This section details the specific, powerful libraries chosen to augment the LÖVE framework for a complete development experience.
+
+### **Architecture & State Management**
+
+- [**hump.gamestate**](http://hump.readthedocs.io/en/latest/gamestate.html)
+  - **Role:** Game State Management
+  - **Description:** A clean and simple library for managing game states. It helps organize code by separating logic for different parts of your game—such as menus, levels, and pause screens—into distinct, manageable states.
+- [**knife.system**](https://github.com/afroraydude/knife/blob/master/readme.md#knifesystem)
+  - **Role:** Minimalist Entity-Component-System (ECS)
+  - **Description:** A lightweight and functional approach to the Entity-Component-System pattern. It helps to structure game logic by composing complex game entities from simple, reusable data components, promoting flexible and decoupled code.
+
+### **GUI**
+
+- [**LÖVE-Nuklear**](https://github.com/keharriso/love-nuklear)
+  - **Role:** Immediate Mode GUI Library
+  - **Description:** Provides bindings for the lightweight Nuklear GUI library, perfect for creating fast and simple user interfaces for developer consoles, debug menus, or even the entire game UI without adding significant overhead.
+
+### **Networking**
+
+- [**LuaSocket**](https://lunarmodules.github.io/luasocket/introduction.html)
+  - **Role:** Low-Level Networking
+  - **Description:** The foundational library for network programming in Lua. It provides direct access to low-level TCP and UDP protocols, making it the essential building block for any multiplayer game or network-aware application.
+
+### **Physics & Collision**
+
+- [**Box2D**](https://box2d.org/)
+  - **Role:** Integrated 2D Physics Engine
+  - **Description:** LÖVE comes with built-in bindings for the Box2D physics engine, the industry standard for 2D physics. It provides a robust, feature-rich simulation for everything from simple object collisions to complex articulated bodies.
+- [**bump.lua**](https://github.com/kikito/bump.lua)
+  - **Role:** Collision Detection Library
+  - **Description:** For projects that need fast collision detection without a full physics simulation, `bump.lua` is ideal. This lightweight library excels at fast, grid-based, axis-aligned bounding box (AABB) collisions, perfect for tile-based games.
+
+### **Level Design**
+
+- [**Tiled Map Editor**](https://www.mapeditor.org/)
+  - **Role:** 2D Level Editor
+  - **Description:** A free, flexible, and feature-rich level editor for creating tile-based maps. Tiled is the de-facto standard for indie game development, allowing you to visually design complex worlds that can be programmatically loaded into your game.
+- [**STI (Simple Tiled Implementation)**](https://github.com/karai17/Simple-Tiled-Implementation)
+  - **Role:** Tiled Map Loader
+  - **Description:** The most popular and robust library for loading maps created with Tiled directly into LÖVE. It handles the rendering of tile layers, objects, and properties, seamlessly bridging the gap between your editor and your game code.
+
+### **Asset Management**
+
+- [**cargo**](https://github.com/bjornbytes/cargo)
+  - **Role:** Asset Loading & Management
+  - **Description:** An automated asset loading system for LÖVE. Cargo preloads and caches your game's assets based on your file structure, simplifying management and ensuring that assets are available when needed without cluttering your game logic.
+
+### **Utility & Helpers**
 
 - [**lume**](https://github.com/rxi/lume)
   - **Role:** General-Purpose Utility Library
-  - **Description:** Essential helper functions extending Lua's standard library with tools for math, table manipulation, functional programming, and game-specific utilities.
+  - **Description:** A collection of essential helper functions that extends Lua's small standard library. Lume provides invaluable, well-tested tools for math, table manipulation, string formatting, and functional programming patterns.
+- [**hump.timer**](http://hump.readthedocs.io/en/latest/timer.html)
+  - **Role:** Timed & Scheduled Actions
+  - **Description:** An indispensable tool for scheduling time-based events. It allows you to easily create timers, alarms, and tweens to manage everything from cooldowns and delays to complex, multi-step scripted sequences.
+- [**Jumper**](https://github.com/Yonaba/Jumper)
+  - **Role:** Grid-Based Pathfinding
+  - **Description:** A fast and efficient pathfinding library implementing algorithms like A\* and Jump Point Search. Jumper is easy to integrate into any grid-based game, simplifying the implementation of entity navigation.
 - [**tween.lua**](https://github.com/kikito/tween.lua)
-  - **Role:** Animation and Easing Library
-  - **Description:** Professional-grade tweening library supporting all standard easing functions for smooth animations, UI transitions, and visual effects.
-- **Custom Utilities:** Math helpers, collision detection, game state management, and more
+  - **Role:** Animation & Easing Library
+  - **Description:** An essential library for creating smooth animations and transitions. `tween.lua` allows you to interpolate any numeric value over a set duration using a variety of easing functions, bringing life to UI elements and character movements.
 
-### **Development Tools and Workflow**
+### **Development, Tooling, & Quality Assurance**
 
-Modern development tooling designed for rapid iteration and professional game development.
+A professional workflow requires strong tooling for performance, code quality, and deployment.
 
-- **Project Templates:** Pre-configured starting points for each framework
-- **Build Scripts:** Automated building and packaging for distribution
-- **Development Automation:** Makefile with shortcuts for common tasks
-- **Documentation System:** Comprehensive guides and API references
+### **Core Runtime & Package Management**
+
+- [**LuaJIT**](https://luajit.org/luajit.html)
+  - **Role:** High-Performance Lua Interpreter
+  - **Description:** A Just-In-Time (JIT) compiler that significantly boosts Lua's performance. LÖVE and LÖVR both use LuaJIT by default, ensuring your games run as fast as possible.
+- [**LuaRocks**](https://luarocks.org/learn)
+  - **Role:** Package Manager
+  - **Description:** The premier package manager for the Lua ecosystem. LuaRocks allows you to easily find, install, and manage Lua libraries ("rocks"), streamlining dependency management for your project.
+
+### **Code Quality**
+
+- [**luacheck**](https://github.com/mpeterv/luacheck)
+  - **Role:** Static Analyzer & Linter
+  - **Description:** A tool that analyzes your code to detect issues like unused variables, undefined globals, and syntax errors before you run your game. Integrating a linter is a best practice for maintaining high-quality, bug-free code.
+- [**busted**](https://lunarmodules.github.io/busted/)
+  - **Role:** Unit Testing Framework
+  - **Description:** The most popular testing framework for Lua, enabling you to write and run automated tests for your game's logic. Adopting unit testing is critical for ensuring code correctness and refactoring with confidence.
+
+### **Build & Deployment**
+
+- [**love-actions**](https://github.com/love-actions)
+  - **Role:** Continuous Integration & Deployment (CI/CD)
+  - **Description:** A suite of GitHub Actions designed to automate the build process for LÖVE games. It can automatically package your project for Windows, macOS, Linux, and mobile, making distribution effortless.
+- [**love.js**](https://github.com/love-community/love.js)
+  - **Role:** Web Porting & Distribution
+  - **Description:** A port of LÖVE that uses Emscripten to run your games directly in a web browser. This is the primary method for making your LÖVE games easily shareable and playable on the web.
 
 </details>
 
