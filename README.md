@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="lua.jpg" alt="Lua Gaming" width="300" />
+  <img src="lua.jpg" alt="Lua Gaming" width="500" />
 </p>
 
 <p align="center">
@@ -178,15 +178,19 @@ Modern development tooling designed for rapid iteration and professional game de
 This monorepo includes four fully functional demo games showcasing each framework:
 
 ### 🚀 **Asteroids 2D** (LÖVE)
+
 Classic space shooter with modern touches featuring particle effects, smooth controls, and progressive difficulty.
 
 ### 🌌 **Space Explorer 3D** (LÖVR)
+
 Immersive 3D space exploration with full VR support, spatial audio, and hand controller integration.
 
 ### 🐍 **Snake Retro** (PICO-8)
+
 Classic snake game with authentic retro aesthetics, smooth animations, and challenging gameplay.
 
 ### 🏃 **Platformer Mini** (TIC-80)
+
 Tight platformer controls with pixel-perfect collision detection, collectibles, and level progression.
 
 ---
